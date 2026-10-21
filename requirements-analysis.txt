@@ -1,0 +1,4 @@
+# Versions used for the original local verification. No packages are needed to build the ZIP.
+capstone==5.0.9
+pyelftools==0.33
+unicorn==2.1.4

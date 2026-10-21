@@ -1,0 +1,6 @@
+id=mt6893-usb-audio-fix
+name=MT6893 USB Audio Fix
+version=0.1-test
+versionCode=1
+author=xCaptaiN09
+description=Exact-build USB audio repair for two incompatible OPlus performance calls in the 32-bit MT6893 audio HAL.

@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+.DS_Store
+Thumbs.db
+
+# Keep local device evidence and proprietary binaries out of git.
+private/
+device-logs/
+*.so
+*.so.*
+*.log
+tombstone*
