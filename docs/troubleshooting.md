@@ -24,7 +24,7 @@ sha256sum /proc/1/root/vendor/lib/hw/audio.primary.mt6893.so
 logcat -d -s MagicMount:V '*:S' | tail -n 60
 ```
 
-The expected patched hash starts with `b334b7ed`; the original starts with `f080b9f3`. Compare the complete values in the README. `/proc/1/root` checks init's filesystem view; it does not directly inspect the bytes already mapped into a particular audio-service process. A reboot is part of the test procedure.
+The expected patched hash starts with `b334b7ed`; the original starts with `f080b9f3`. Compare the complete values in [`module/config.sh`](../module/config.sh). `/proc/1/root` checks init's filesystem view; it does not directly inspect the bytes already mapped into a particular audio-service process. A reboot is part of the test procedure.
 
 An empty filtered logcat result means no matching messages were returned from the retained buffers. It does not prove that the backend succeeded.
 

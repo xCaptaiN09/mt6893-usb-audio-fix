@@ -17,6 +17,10 @@ Reported by xCaptaiN09 on **22 October 2026, India time** (21 October UTC).
 
 The successful playback result was user-reported. The verifier cannot perform this physical test. No fresh post-fix crash capture was supplied to establish that every audio crash had stopped.
 
+## Additional playback confirmation
+
+On **23 October 2026**, xCaptaiN09 reported successful music playback through an external USB DAC on the same Realme X7 Max ColorOS 17 port. This adds a working DAC playback result; the other unverified functions listed above remain unverified.
+
 ## Local checks
 
 The optional `tools/verify_libraries.py` performs the same substantive checks used during development:
@@ -40,6 +44,8 @@ The optional `tools/verify_libraries.py` performs the same substantive checks us
 
 `tools/build.py` checks the expected source file set, LF text, required module ID, archive integrity, root-level installer files, safe entry names, and the absence of bundled `.so` files.
 
-The library and installer verifier passed using the exact supplied library pair. Documentation and author metadata changes produce a new package checksum.
+The library and installer verifier passed using the exact supplied library pair. Version 1.0.0 retains the same binary patch and exact-build guards. Release metadata and installer wording were updated and the ZIP was rebuilt with a new checksum. The release packaging update is not a new phone playback test.
+
+`python tools/verify.py` audits the release metadata, module source hashes, shell syntax, ZIP/source equality, permissions, CRC, checksums and local Markdown links. It requires only the Python standard library and a POSIX shell.
 
 These results do not validate Android Binder behavior, kernel compatibility on another device, every SELinux configuration, or untested audio functions.

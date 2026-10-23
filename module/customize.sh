@@ -2,10 +2,10 @@
 # Sourced by the root manager after normal ZIP extraction.
 # All binary writes are confined to the module's private system overlay.
 
-[ "$BOOTMODE" = true ] || abort "Install this test from your root manager app, not recovery."
+[ "$BOOTMODE" = true ] || abort "Install this module from your root manager app, not recovery."
 case "$ARCH" in
   arm|arm64) ;;
-  *) abort "This test requires an ARM device with the exact supplied libraries." ;;
+  *) abort "This module requires an ARM device with the exact supplied libraries." ;;
 esac
 [ -n "$MODPATH" ] && [ -f "$MODPATH/config.sh" ] || abort "Module extraction is incomplete."
 . "$MODPATH/config.sh"
@@ -66,7 +66,7 @@ ui_print "      Permissions: SET"
 ui_print ""
 ui_print "READY - reboot to activate."
 ui_print "After reboot, open Action."
-ui_print "Then connect USB audio and test."
+ui_print "Connect your USB earphones or DAC and play music."
 ui_print ""
 ui_print "Undo: disable/remove, then reboot."
 ui_print "Remove before a ROM update."

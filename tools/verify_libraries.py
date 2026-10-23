@@ -150,7 +150,7 @@ passed('All packaged shell scripts pass POSIX shell syntax checks and use LF lin
 
 # Run the real installer script with test-only input-path substitution and mocked
 # root-manager permission helpers. This is not an Android/SELinux runtime test.
-with tempfile.TemporaryDirectory(prefix='chu2-installer-test-') as temp:
+with tempfile.TemporaryDirectory(prefix='mt6893-usb-audio-verify-') as temp:
     base = Path(temp)
     harness = base / 'harness.sh'
     harness.write_text('''ui_print() { printf '%s\\n' "$*"; }
